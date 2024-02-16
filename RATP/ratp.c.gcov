@@ -1,34 +1,34 @@
         -:    0:Source:ratp.c
         -:    0:Graph:ratp.gcno
         -:    0:Data:ratp.gcda
-        -:    0:Runs:3
+        -:    0:Runs:5
         -:    1:#include "age.h"
         -:    2:
         -:    3:static const float Price = 1.5;
         -:    4:int limitAge;
         -:    5:int *plimit = &limitAge;
         -:    6:
-function computePrice called 12 returned 100% blocks executed 100%
-       12:    7:float computePrice(int age, int tourist)
+function computePrice called 20 returned 100% blocks executed 100%
+       20:    7:float computePrice(int age, int tourist)
         -:    8:{
-       12:    9:    recupAge(plimit);
-call    0 returned 12
-       12:   10:    if (age>limitAge)
-branch  0 taken 6 (fallthrough)
-branch  1 taken 6
+       20:    9:    recupAge(plimit);
+call    0 returned 20
+       20:   10:    if (age>limitAge)
+branch  0 taken 10 (fallthrough)
+branch  1 taken 10
         -:   11:    {
-        6:   12:        if (tourist)
-branch  0 taken 3 (fallthrough)
-branch  1 taken 3
-        3:   13:            return Price*2;
-        3:   14:        return Price;
+       10:   12:        if (tourist)
+branch  0 taken 5 (fallthrough)
+branch  1 taken 5
+        5:   13:            return Price*2;
+        5:   14:        return Price;
         -:   15:    }
         -:   16:    else 
         -:   17:    {
-        6:   18:        if (tourist)
-branch  0 taken 3 (fallthrough)
-branch  1 taken 3
-        3:   19:            return Price;
-        3:   20:        return Price/2;
+       10:   18:        if (tourist)
+branch  0 taken 5 (fallthrough)
+branch  1 taken 5
+        5:   19:            return Price;
+        5:   20:        return Price/2;
         -:   21:    }
         -:   22:}
