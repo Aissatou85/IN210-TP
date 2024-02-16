@@ -23,5 +23,5 @@ clean:
 
 mrproper: clean
 	del testAll.exe
-	del result.xml
+	del result.html
     
